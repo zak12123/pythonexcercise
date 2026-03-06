@@ -1,0 +1,37 @@
+import random  # Import the random module so Python can generate random numbers
+MYNUMBER = 7
+
+def guess_number():  # Define a function named guess_number
+    # number = random.randint(1, 10)  # Pick a random number between 1 and 10 and store it in 'number'
+    number = MYNUMBER
+    attempts = 0  # Start a counter for how many guesses the player has made
+
+    print("I'm thinking of a number between 1 and 10.")
+    print("You only have 3 attempts!")  # Tell the player how many tries they get
+
+    while True:  # Start a loop that continues until we break out of it
+        guess = input("Have a guess: ")  # Ask the user to type a guess
+
+        if not guess.isdigit():  # Check if the input is NOT a valid positive whole number
+            print("Please enter a valid number.")
+            continue  # Go back to the start of the loop without counting this as an attempt
+
+        guess = int(guess)  # Convert the valid input from a string into an integer
+        attempts += 1  # Add 1 to the attempt counter
+
+        if guess < number:  # If the player's guess is smaller than the secret number
+            print("Too low!")
+        elif guess > number:  # If the player's guess is larger than the secret number
+            print      ("Too high!")
+        else:  # If neither condition is true, the guess must be equal to the secret number
+            print(f"Correct! The number was {number}. Your attempts were {attempts}.")
+            break  # Exit the loop because the player guessed correctly
+
+        # Check if the player used all 3 attempts
+        if attempts == 3:
+            print(f"You are out of attempts! The number was {number}.")  # Reveal the answer
+            break  # End the game
+guess_number()# call back function
+ 
+  
+print('==========================End of the program=============================')

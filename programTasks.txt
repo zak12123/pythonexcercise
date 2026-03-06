@@ -1,0 +1,21 @@
+
+value of A is 7
+value of B is 9
+
+swap A and B 
+
+when i Ask what is value A i should get 9
+similar value B should 7
+
+
+
+
+
+
+
+
+write a program that displays 3 times table 
+
+1X3 = 3
+2X3 = 6
+3X3 = 9
